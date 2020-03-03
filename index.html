@@ -5,27 +5,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<link rel="stylesheet" href="./style.css">
-	<script>
-		const flagIcon = document.createElement("flag-icon")
-		flagIcon.country = "jp"
-		document.body.appendChild(flagIcon)
-	</script>
+	<link rel="stylesheet" href="./zine.css">
+	<link rel="stylesheet" href="./panels.css">
 </head>
 <body>
 	<div class="a-crop">
 		<div class="panels">
 			<section class="panel panel-front">
 				<script type="module">
-					import './script.js';
+					import './panel-front.js';
 				</script>
 			</section>
 			<section class="panel panel-2">
-				<flag-icon country="jp">hello</flag-icon>
-				<p>..yeah, you probably do. I saw my friend's instagram story recently and it had something about being addicted to stress. And I related to that.</p>
+				<script type="module">
+					import './panel-2.js';
+				</script>
 			</section>
 			<section class="panel panel-3">
-				<p>But I don't really think I'm addicted to stress...am I? I do get stressed sometimes, and when things are going well it kind of seems like I make up problems or blow small problems out of proportion. I guess that is what being addicted to stress is.</p>
+				<script type="module">
+					import './panel-3.js';
+				</script>
 			</section>
 			<section class="panel panel-4">
 				<h2>Thanks for the share</h2>

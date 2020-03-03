@@ -21,7 +21,7 @@ body {
 
 .panels {
 	display: grid;
-	grid-template-columns: repeat( 4, 1fr );
+	grid-template-columns: repeat( 4, 25% );
 	grid-template-rows: repeat( 2, 50% );
 	grid-template-areas: 
     "p5 p4 p3 p2"
@@ -31,12 +31,12 @@ body {
 
 .panel {
 	counter-increment: panel;
-	background-color: aliceblue;
 	border: 1px solid #eeeeee;
 	display: grid;
 	align-content: center;
 	padding: 2rem;
 	position: relative;
+	overflow: hidden;
 }
 
 .panel::after {
