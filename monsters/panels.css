@@ -11,18 +11,21 @@ body {
 	font-family: var( --font-family-body );
 }
 
-.panel-front {
-	background-image: url( './images/monster-1.png' );
+[class*="monster"] {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center bottom;
 }
 
-.panel-2 {
-	background-color: aliceblue;
+.monster-bobo {
+	background-image: url( './images/monster-1.png' );
 }
 
-.panel-2 h2 {
+.monster-maxine {
+	background-image: url( './images/monster-2.png' );
+}
+
+.label {
 	background-color: white;
 	box-shadow: 
 		0 1px 1px rgba( 0,0,0,0.2),
@@ -30,10 +33,14 @@ body {
 		0 3px 3px rgba( 0,0,0,0.2);
 	padding: var( --spacer-sm );
 	font-size: var(--font-size-medium);
-	white-space: nowrap;
+}
+
+.tilt-15deg {
 	transform: rotate(15deg);
-	/* position: absolute;
-	top: 60%; */
+}
+
+.tilt-n15deg {
+	transform: rotate(-15deg);
 }
 
 blockquote {

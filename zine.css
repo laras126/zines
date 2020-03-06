@@ -34,7 +34,7 @@ body {
 	border: 1px solid #eeeeee;
 	display: grid;
 	align-content: center;
-	padding: 2rem;
+	/* padding: 2rem; */
 	position: relative;
 	overflow: hidden;
 }
@@ -54,8 +54,16 @@ body {
 		font-size: 18pt;
 	}
 
+	.a-hidden\@print {
+		display: none;
+	}
+
 	.a-crop {
 		all: unset;
+	}
+
+	.panel::after {
+		content: '';
 	}
 
 	.panels {
