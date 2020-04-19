@@ -1,11 +1,4 @@
-// fetch( 'https://www.stands4.com/services/v2/poetry.php?uid=1001&tokenid=tk324324&term=grass&format=json', {
-// 	mode: 'no-cors' // 'cors' by default
-//   } ).then( ( response ) => {
-// 	return response.results;
-// } )
-// 	.then( ( data ) => console.log( data ) );
-
-
+// Some toggling shit whatever
 
 class Controls {
 	constructor( el ) {
@@ -17,9 +10,9 @@ class Controls {
 	}
 
 	onClick( e ) {
-		
+
 		const toggleSelector = e.target.dataset.toggleSelector || null;
-		
+
 		if ( null !== toggleSelector ) {
 
 			[...document.querySelectorAll( toggleSelector )].forEach( ( el ) => {
@@ -30,7 +23,7 @@ class Controls {
 				}
 			} );
 		}
-		
+
 	}
 }
 
