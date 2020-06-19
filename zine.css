@@ -35,7 +35,7 @@ a {
 	height: calc( 100% - var( --margin-size, 18pt ) );
 }
 
-@media screen and ( min-width: 700px ) {
+@media ( min-width: 700px ) {
 
 	.panels {
 		display: grid;
