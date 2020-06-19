@@ -1,3 +1,11 @@
+p, li {
+	font-size: inherit;
+}
+
+ol, ul {
+	list-style-position: inside;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -10,7 +18,11 @@ body {
 
 .a-crop {
 	position: relative;
-	padding-bottom: calc( (8.5 / 11) * 100% );
+	padding-bottom: calc( ( 8.5 / 11 ) * 100% );
+}
+
+.a-crop-profile {
+	padding-bottom: calc( ( 11 / 8.5 ) * 100% );
 }
 
 .a-crop .panels {
@@ -23,10 +35,18 @@ body {
 	display: grid;
 	grid-template-columns: repeat( 4, 25% );
 	grid-template-rows: repeat( 2, 50% );
-	grid-template-areas: 
+	grid-template-areas:
     "p5 p4 p3 p2"
     "p6 p7 back front";
 	counter-reset: panel;
+}
+
+.pages-4 {
+	grid-template-columns: repeat( 2, 50% );
+	grid-template-rows: repeat( 2, 50% );
+	grid-template-areas:
+    "p3 p2"
+    "back front";
 }
 
 .panel {
