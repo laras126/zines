@@ -35,41 +35,44 @@ a {
 	height: calc( 100% - var( --margin-size, 18pt ) );
 }
 
-.panels {
-	display: grid;
-	grid-template-columns: repeat( 4, 25% );
-	grid-template-rows: repeat( 2, 50% );
-	grid-template-areas:
-    "p5 p4 p3 p2"
-    "p6 p7 back front";
-	counter-reset: panel;
-}
+@media screen and ( min-width: 700px ) {
 
-.pages-4 {
-	grid-template-columns: repeat( 2, 50% );
-	grid-template-rows: repeat( 2, 50% );
-	grid-template-areas:
-    "p3 p2"
-    "back front";
-}
+	.panels {
+		display: grid;
+		grid-template-columns: repeat( 4, 25% );
+		grid-template-rows: repeat( 2, 50% );
+		grid-template-areas:
+		"p5 p4 p3 p2"
+		"p6 p7 back front";
+		counter-reset: panel;
+	}
 
-.panel {
-	counter-increment: panel;
-	border: 1px solid #eeeeee;
-	display: grid;
-	align-content: center;
-	/* padding: 2rem; */
-	position: relative;
-	overflow: hidden;
-}
+	.pages-4 {
+		grid-template-columns: repeat( 2, 50% );
+		grid-template-rows: repeat( 2, 50% );
+		grid-template-areas:
+		"p3 p2"
+		"back front";
+	}
 
-.panel::after {
-	content: counter(panel);
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-size: 60px;
-	color: lavender;
+	.panel {
+		counter-increment: panel;
+		border: 1px solid #eeeeee;
+		display: grid;
+		align-content: center;
+		/* padding: 2rem; */
+		position: relative;
+		overflow: hidden;
+	}
+
+	.panel::after {
+		content: counter(panel);
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 60px;
+		color: lavender;
+	}
 }
 
 @media print {
@@ -80,8 +83,6 @@ a {
 
 	a::after {
 		content: " (" attr(href) ")";
-		font-weight: normal;
-		font-style: italic;
 		color: black;
 	}
 
